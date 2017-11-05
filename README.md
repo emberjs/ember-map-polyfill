@@ -1,5 +1,7 @@
 # ember-map-polyfill
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/locks/ember-map-polyfill.svg)](https://greenkeeper.io/)
+
 This README outlines the details of collaborating on this Ember addon.
 
 ## Installation
