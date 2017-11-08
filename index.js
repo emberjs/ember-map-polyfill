@@ -2,5 +2,5 @@
 'use strict';
 
 module.exports = {
-  name: 'ember-map-polyfill'
+  name: '@ember/map-polyfill'
 };
