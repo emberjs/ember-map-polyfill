@@ -1,6 +1,7 @@
 import { module, test } from 'qunit';
 
 import Map from '@ember/map-polyfill';
+import { isEmpty } from '@ember/utils';
 
 let object, number, string, map;
 
@@ -435,4 +436,11 @@ test('0 value', function(assert) {
   assert.equal(map.has(obj), false);
   assert.equal(map.get(obj), undefined);
   assert.equal(map.size, 0);
+});
+
+test('Ember.isEmpty Ember.Map', function(assert) {
+  let map = new Map();
+  assert.equal(isEmpty(map), true, 'Empty map is empty');
+  map.set('foo', 'bar');
+  assert.equal(isEmpty(map), false, 'Map is not empty');
 });
