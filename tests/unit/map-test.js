@@ -119,8 +119,6 @@ test('has empty collection', function(assert) {
 });
 
 test('delete', function(assert) {
-  expectNoDeprecation();
-
   map.set(object, 'winning');
   map.set(number, 'winning');
   map.set(string, 'winning');
@@ -133,6 +131,8 @@ test('delete', function(assert) {
   map.delete({});
 
   mapHasEntries(assert, []);
+
+  assert.expectNoDeprecation();
 });
 
 test('copy and then update', function(assert) {
@@ -213,19 +213,19 @@ test('size', function(assert) {
 });
 
 test('forEach without proper callback', function(assert) {
-  expectAssertion(function() {
+  assert.expectAssertion(function() {
     map.forEach();
   }, '[object Undefined] is not a function');
 
-  expectAssertion(function() {
+  assert.expectAssertion(function() {
     map.forEach(undefined);
   }, '[object Undefined] is not a function');
 
-  expectAssertion(function() {
+  assert.expectAssertion(function() {
     map.forEach(1);
   }, '[object Number] is not a function');
 
-  expectAssertion(function() {
+  assert.expectAssertion(function() {
     map.forEach({});
   }, '[object Object] is not a function');
 
@@ -234,7 +234,7 @@ test('forEach without proper callback', function(assert) {
   });
   // ensure the error happens even if no data is present
   assert.equal(map.size, 0);
-  expectAssertion(function() {
+  assert.expectAssertion(function() {
     map.forEach({});
   }, '[object Object] is not a function');
 });
