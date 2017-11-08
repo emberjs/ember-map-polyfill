@@ -9,5 +9,6 @@ module.exports = {
     browser: true
   },
   rules: {
+    'no-compare-neg-zero': 'off',
   }
 };
