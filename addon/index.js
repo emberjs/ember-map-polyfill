@@ -1,3 +1,7 @@
+import OrderedSet from '@ember/ordered-set';
+import { guidFor } from '@ember/object/internals';
+import { assert } from '@ember/debug';
+
 /*
   JavaScript (before ES6) does not have a Map implementation. Objects,
   which are often used as dictionaries, may only have Strings as keys.
