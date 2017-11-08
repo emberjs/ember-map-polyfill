@@ -5,7 +5,7 @@ import Map from '@ember/map-polyfill';
 let object, number, string, map;
 
 module('Ember.Map (forEach and get are implicitly tested)', {
-  setup() {
+  beforeEach() {
     object = {};
     number = 42;
     string = 'foo';
