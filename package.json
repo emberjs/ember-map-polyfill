@@ -25,6 +25,7 @@
     "test": "ember try:each"
   },
   "dependencies": {
+    "@ember/ordered-set": "https://github.com/emberjs/ember-ordered-set.git#97f50a7",
     "ember-cli-babel": "^6.9.0"
   },
   "devDependencies": {
