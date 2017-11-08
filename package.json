@@ -38,6 +38,7 @@
     "ember-cli-inject-live-reload": "^1.4.1",
     "ember-cli-qunit": "^4.0.0",
     "ember-cli-shims": "^1.1.0",
+    "ember-debug-handlers-polyfill": "^1.0.4",
     "ember-disable-prototype-extensions": "^1.1.2",
     "ember-load-initializers": "^1.0.0",
     "ember-qunit-assert-helpers": "^0.2.0",
